@@ -1,0 +1,42 @@
+function Calculate()
+{
+	var val1=document.getElementById("pdoll").value;
+	var val2=document.getElementById("pcal").value;
+	var val3=document.getElementById("pmob").value;
+	var val4=document.getElementById("pdisc").value;
+	var name1=document.getElementById("")
+	if(val1.length==0 && val2.length==0 && val3.length==0 && val4.length==0)
+	{
+		alert("Enter something");
+	}
+	else
+	{
+		val1=(val1.length==0)?"0":val1;
+		val2=(val1.length==0)?"0":val2;
+		val3=(val1.length==0)?"0":val3;
+		val4=(val1.length==0)?"0":val4;
+		//document.write(parseInt((val1*20)));
+		var total=((parseInt(val1*20))+(parseInt(val2*30))+(parseInt(val3*50))+(parseInt(val4*40)));
+		anotherwindow=window.open("","","toolbar=no,status=no,width=500,height=500");
+		anotherwindow.document.write("<html><body><table border=2><tbody><tr><th>Name</th><th>Contribution</th><th>Total</th></tr>");
+		if(val1.length!=0)
+		{
+			anotherwindow.document.write("<tr><td>Doll</td><td>"+val1+"</td><td>"+(val1*20)+"</td></tr>");
+		}
+		if(val2.length!=0)
+		{
+			anotherwindow.document.write("<tr><td>Calculator</td><td>"+val2+"</td><td>"+(val2*30)+"</td></tr>");
+		}
+		if(val3.length!=0)
+		{
+			anotherwindow.document.write("<tr><td>Phone</td><td>"+val3+"</td><td>"+(val3*50)+"</td></tr>");
+		}
+		if(val4.length!=0)
+		{
+			anotherwindow.document.write("<tr><td>DVD</td><td>"+val4+"</td><td>"+(val4*40)+"</td></tr>");
+		}
+		anotherwindow.document.write("<tr><td colspan=2>Grand Total</td><td><b>"+total+"</b></td></tr>")
+		anotherwindow.document.write("</tbody></table></body></html>")
+		//document.write("Total: "+total);
+	}
+}
