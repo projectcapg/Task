@@ -13,3 +13,14 @@ Lines 22 to 30 in angular.json
             ],
             "scripts": ["node_modules/jquery/dist/jquery.min.js","node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
+
+
+Copy into app.module.ts:
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+
+ imports: [
+    BrowserModule,
+    AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
+  ],
