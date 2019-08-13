@@ -1,0 +1,24 @@
+1) Add the tags in the app.component.html
+
+2) app.module.ts is also important -  import everything required in there FormsModule, ReactiveForms and HTTPClient, The routes are added
+in the app-routing-module.ts
+
+3) Service class is where the real work is done - Adding, deleting and getting all the objects - the logic is actually executed 
+
+4) Similar functions will be present in the component classes which will refer to the service class - service class obj has to be
+initialized in the contructor.
+
+5) List component- EmployeeList or CUstomerList will display the list on the page using *ngFor - The deletion and sorting based on 
+the gender etc will happen here. For deletion operation we call the service class function whereas filtering opeartion happens here.
+
+6) changeMe() func is defined in the employeecount class where an event emitter is used.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) Add Comments
+
+2) Give appropriate data types for variables and functions
+
+3) Decorate and use css styles
+
+4) Then put additional functionalities if time permits.
